@@ -1,0 +1,30 @@
+{
+    "name": "artical",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:watch": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node src/main.ts\"",
+        "start:debug": "DEBUG=main,decorator,controller::user,controller::operate nodemon --watch ./src --exec \"ts-node\" ./src/main.ts",
+        "init:ts": "node_modules/.bin/tsc --init",
+        "dev": "node_modules/.bin/ts-node ./src/main.ts",
+        "build": "node_modules/.bin/tsc",
+        "runts": "ts-node ./src/main.ts",
+        "runjs": "node ./dist/main.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^20.5.7",
+        "debug": "^4.3.4",
+        "nodemon": "^3.0.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "@types/reflect-metadata": "^0.1.0",
+        "reflect-metadata": "^0.1.13"
+    }
+}
